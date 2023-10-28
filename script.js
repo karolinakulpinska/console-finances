@@ -92,9 +92,10 @@ var finances = [
 
 // Variable to store total number of months included in the dataset 
 var totalMonths = finances.length;
+// Log the total number of months in the dataset
 console.log("Total Months: " + totalMonths);
 
-// Variable to store the net total amount of Profit/Losses over the entire period
+// Variable to store the net total amount of Profits/Losses over the entire period
 
   // 1. How to access an array within an array
   // "To access the elements of the inner arrays, you use two sets of square brackets"
@@ -106,7 +107,7 @@ console.log("Total Months: " + totalMonths);
     //   console.log(finances[i][1]);
     // };
 
-  // 3. How to add values of profit/losses for all months
+  // 3. How to add values of profits/losses for all months
   // "The Addition Assignment Operator (+=) adds a value to a variable."
     // test:
     // var finances1 = [
@@ -123,30 +124,49 @@ console.log("Total Months: " + totalMonths);
     // for (var i = 0; i < finances1.length; i++) {
     //   sum1 += finances1[i][1];
     // };
-    // console.log("The total amount of profit/losses over the entire period is $" + sum1); //$3,971,591
+    // console.log("The total amount of profits/losses over the entire period is $" + sum1); //$3,971,591
 
+// Variable to store the total amount of profits/losses over the entire period
 var total = 0;
+// Loop through the array of monthly values starting at the first element [0]
 for (var i = 0; i < finances.length; i++) {
+  // Add all values together and store them in a variable
   total += finances[i][1];
 };
-console.log("Total: $" + total); //$38,382,578
+// Log the total amount of profits/losses over the entire period
+console.log("Total: $" + total); 
 
-// The average of the **changes** in Profit/Losses over the entire period.
-
+// The average of the changes, greatest increase and decrease in Profit/Losses over the entire period.
+// Variables to store the difference on a monthly basis, total change, average change, biggest increase and biggest decrease in profits/losses
 var differenceMonthly = 0;
 var totalChange = 0;
 var averageChange = 0;
-// Loop through an array of monthly values starting at the second element [1] since we need to compare current element to previous one
+var greatestIncrease = ['Jan-2010', 0];
+var greatestDecrease = ['Jan-2010', 0];
+// Loop through the array of monthly values starting at the second element [1] since we need to compare current element to previous one
 for (var i = 1; i < finances.length; i++) {
-  // Calculate the difference on a monthly basis comparing current month to previous one
+  // Calculate the difference on a monthly basis comparing current month to previous one and store in a variable
   differenceMonthly = finances[i][1] - finances[i - 1][1];
-  // Add all values to total change
+  // Add all values to total change and store the sum in a variable
   totalChange += differenceMonthly;
-  // Calculate the average change in profit/losses by dividing the total change by number of months - 1
+  // Calculate the average change in profit/losses by dividing the total change by number of months - 1 and store the result in a variable
   averageChange = totalChange / finances.length - 1;
+  // If the difference on a monthly basis is greater than the current greatest increase, update the month and value of current greatest increase and store in a var
+  if (differenceMonthly > greatestIncrease[1]) {
+    greatestIncrease = [finances[i][0], differenceMonthly];
+    // If the difference on a monthly basis is lesser than the current greatest decrease, update the month and value of current greatest decrease and store in a var
+  } else if (differenceMonthly < greatestDecrease[1]) {
+    greatestDecrease = [finances[i][0], differenceMonthly];
+  };
 };
-// Round the number to the nearest 100
-console.log("Average Change: $" + Math.round(averageChange/100)*100); //$-2300
+// Log the average change and rounds the number to the nearest 100
+console.log("Average Change: $" + Math.round(averageChange/100)*100); 
+// Log the greatest increase
+console.log("Greatest Increase in Profits/Losses: " + greatestIncrease[0] + " ($" + greatestIncrease[1] + ")");
+// Log the greatest decrease
+console.log("Greatest Decrease in Profits/Losses: " + greatestDecrease[0] + " ($" + greatestDecrease[1] + ")");
+
+
 
 
 
