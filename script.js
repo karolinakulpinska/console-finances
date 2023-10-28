@@ -89,7 +89,14 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-// Pseudocode:
 // Variable to store total number of months included in the dataset 
 var monthsAmount = finances.length;
-console.log("The total number of months included in the dataset " + monthsAmount + " .")
+console.log("The total number of months included in the dataset " + monthsAmount + " .");
+
+// Variable to store the net total amount of Profit/Losses over the entire period
+
+// How to access an array within an array
+// To access the elements of the inner arrays, you simply use two sets of square brackets
+// test
+// console.log(finances[1][1]);
+
