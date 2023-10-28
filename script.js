@@ -95,8 +95,43 @@ console.log("The total number of months included in the dataset " + monthsAmount
 
 // Variable to store the net total amount of Profit/Losses over the entire period
 
-// How to access an array within an array
-// To access the elements of the inner arrays, you simply use two sets of square brackets
-// test
-// console.log(finances[1][1]);
+  // 1. How to access an array within an array
+  // "To access the elements of the inner arrays, you use two sets of square brackets"
+    // test:
+    // console.log(finances[1][1]);
+
+  // 2. Logs profit/loss for each month
+    // for (var i = 0; i < finances.length; i++) {
+    //   console.log(finances[i][1]);
+    // };
+
+  // 3. How to add values of profits/loses for all months
+  // "The Addition Assignment Operator (+=) adds a value to a variable."
+    // test:
+    // var finances1 = [
+    //   ['Jan-2010', 867884],
+    //   ['Feb-2010', 984655],
+    //   ['Mar-2010', 322013],
+    //   ['Apr-2010', -69417],
+    //   ['May-2010', 310503],
+    //   ['Jun-2010', 522857],
+    //   ['Jul-2010', 1033096],
+    // ];
+  // A variable to store the sum
+    // var sum1 = 0;
+    // for (var i = 0; i < finances1.length; i++) {
+    //   sum1 += finances1[i][1];
+    // };
+    // console.log("The total amount of profit/losses over the entire period is $" + sum1); //$3,971,591
+
+var sum = 0;
+for (var i = 0; i < finances.length; i++) {
+  sum += finances[i][1];
+};
+console.log("The total amount of profit/losses over the entire period is $" + sum); //$38,382,578
+
+
+
+
+
 
