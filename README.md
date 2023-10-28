@@ -1,98 +1,33 @@
-# Unit 4 Challenge: Console Finances
+# Financial Analysis
 
-## Overview
+## Description
 
-In this challenge, you'll be using the concepts you've learned to complete the required activity. This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the `starter/script.js` file.
-
-## Instructions
-
-1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
-
-2. Copy the starter files in your local git repository.
-
-You have been given a dataset composed of arrays with two fields, Date and Profit/Losses.
-
-Your task is to write JavaScript code that analyzes the records to calculate each of the following:
+In this challenge, I used my newfound JavaScript skills to complete the required activity. I was tasked with creating code for analyzing the financial records of a company. I have been provided with a financial dataset composed of arrays with two fields, Date and Profit/Losses as well as instructions to complete the challenge. I had 
+My task was to write JavaScript code that analyzes the records to calculate each of the following:
 
 * The total number of months included in the dataset.
-
 * The net total amount of Profit/Losses over the entire period.
-
 * The average of the **changes** in Profit/Losses over the entire period.
-  * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-  * (`Total/(Number of months - 1)`)
-  
-
+  * Track what the total change in Profit/Losses are from month to month and then find the **average**.
 * The greatest increase in Profit/Losses (date and amount) over the entire period.
-
 * The greatest decrease in Profit/Losses (date and amount) over the entire period.
+* The final code should print the analysis to the console.
 
-When you open your code in the browser your resulting analysis should look similar to the following:
+I used variables to store data and arithmetic comparisons to perform calculations. Before tackling this task I used pseudocode to structure the required steps. Lastly I logged all the data to the console in the browser as per challenge requirements. 
+During the process of building this application I had to do a lot of research to find solutions and use computational thinking to recognise recurring patterns.
 
-  ```text
-  Financial Analysis 
-  ----------------
-  Total Months: 86
-  Total: $38382578
-  Average Change: -2315.12
-  Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-  Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-  ```
+I've also made sure that the application:
+* loads with no errors;
+* is deployed at live URL;
+* resembles the example functionality provided in the challenge instructions;
 
-Your final code should print the analysis to the console.
+As well as repository:
+* follows best practices for file structure and naming conventions;
+* follows best practices for variable naming conventions, indentation, quality commentary, etc;
+* contains multiple descriptive commit messages, contains quality README file with description, screenshot, and link to deployed application.
 
-**Hints:**
+Link to deployed application: https://karolinakulpinska.github.io/code-refactor/
 
-* You will need to do some research on your own for this project!
+## Screenshot of the console log 
 
-* Remember, in order to combine strings and variables in the console you will need to use **concatenation**.
-
-* How do you only print to the nearest 100th in JavaScript?
-
-## Grading Requirements
-
-This homework is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Repository Quality: 23%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for variable naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 5%
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository that contains your code. Give the repository a unique name and include a README file that describes the project.
-
----
-
-## Copyright
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+![alt text](assets/images/screenshot.jpg)
