@@ -106,7 +106,7 @@ console.log("Total Months: " + totalMonths);
     //   console.log(finances[i][1]);
     // };
 
-  // 3. How to add values of profits/loses for all months
+  // 3. How to add values of profit/losses for all months
   // "The Addition Assignment Operator (+=) adds a value to a variable."
     // test:
     // var finances1 = [
@@ -130,6 +130,23 @@ for (var i = 0; i < finances.length; i++) {
   total += finances[i][1];
 };
 console.log("Total: $" + total); //$38,382,578
+
+// The average of the **changes** in Profit/Losses over the entire period.
+
+var differenceMonthly = 0;
+var totalChange = 0;
+var averageChange = 0;
+// Loop through an array of monthly values starting at the second element [1] since we need to compare current element to previous one
+for (var i = 1; i < finances.length; i++) {
+  // Calculate the difference on a monthly basis comparing current month to previous one
+  differenceMonthly = finances[i][1] - finances[i - 1][1];
+  // Add all values to total change
+  totalChange += differenceMonthly;
+  // Calculate the average change in profit/losses by dividing the total change by number of months - 1
+  averageChange = totalChange / finances.length - 1;
+};
+// Round the number to the nearest 100
+console.log("Average Change: $" + Math.round(averageChange/100)*100); //$-2300
 
 
 
