@@ -1,4 +1,5 @@
-console.log("FINANCIAL ANALYSIS");
+console.log("Financial Analysis");
+console.log("----------------");
 
 var finances = [
   ['Jan-2010', 867884],
@@ -91,7 +92,7 @@ var finances = [
 
 // Variable to store total number of months included in the dataset 
 var monthsAmount = finances.length;
-console.log("The total number of months included in the dataset " + monthsAmount + " .");
+console.log("Total Months: " + monthsAmount);
 
 // Variable to store the net total amount of Profit/Losses over the entire period
 
@@ -128,7 +129,7 @@ var sum = 0;
 for (var i = 0; i < finances.length; i++) {
   sum += finances[i][1];
 };
-console.log("The total amount of profit/losses over the entire period is $" + sum); //$38,382,578
+console.log("Total: $" + sum); //$38,382,578
 
 
 
