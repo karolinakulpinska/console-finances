@@ -77,7 +77,7 @@ $ git clone https://github.com/karolinakulpinska/console-finances.git
 
 ## Usage
 
-The data stored in a variable `var = finances` (Date and Profit/Losses) can be replaced following the usage of appropriate type of data (`string` for the date and `number` for the value). To access the data open the script.js file in any code editor (i.e. Visual Studio Code) after cloning the repository to your local machine (see: 'Installation'). Then, after performing desired changes, open the index.html file in Google Chrome browser, right-click anywhere on the screen and choose 'Inspect' from the dropdown menu. The tabs on top of the window will have an option 'Console' which shows results of the updated financial analysis.
+The data stored in a variable `var = finances` (Date and Profit/Losses) can be replaced following the usage of appropriate type of data (`string` for the date and `number` for the value). To access the data open the `script.js` file in any code editor (i.e. Visual Studio Code) after cloning the repository to your local machine (see: 'Installation' above). Then, after performing desired changes, open the `index.html` file in Google Chrome browser, right-click anywhere on the screen and choose 'Inspect' from the dropdown menu. The tabs on top of the window will have an option 'Console' which shows results of the updated financial analysis as shown on the screenshot of the final result (see above).
 
 ## Licence
 
